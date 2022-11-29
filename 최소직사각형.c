@@ -3,8 +3,8 @@
 #include <stdlib.h>
 
 int solution(int** sizes, size_t sizes_rows, size_t sizes_cols) {
-    int big_r = sizes[0][0];
-    int big_c = sizes[0][1];
+    int big_r = 0;
+    int big_c = 0;
     int tmp = 0;
     
     for (int i = 0; i < sizes_rows; i++)
@@ -14,12 +14,6 @@ int solution(int** sizes, size_t sizes_rows, size_t sizes_cols) {
                 tmp = sizes[i][0];
                 sizes[i][0] = sizes[i][1];
                 sizes[i][1] = tmp;
-            
-                if (i == 0)
-                {
-                    big_r = sizes[i][0];
-                    big_c = sizes[i][1];
-                }
             }
         if (big_r < sizes[i][0])
             big_r = sizes[i][0];
