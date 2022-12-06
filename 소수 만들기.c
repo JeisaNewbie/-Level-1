@@ -11,7 +11,17 @@ int check_prime (int number)
     }
     return (1);
 }
-
+/*
+int check_prime (int number)
+{
+    for (int i = 3; i*i <= number; i +=2) // 은우님 코드 참고해서 수정한 함수.
+    {
+        if (!(number % i))
+            return (0);
+    }
+    return (1);
+}
+*/
 int solution(int nums[], size_t nums_len) {
     int answer = 0;
     for (size_t i = 0; i < nums_len - 2; i++)
